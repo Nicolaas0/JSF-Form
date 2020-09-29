@@ -1,0 +1,29 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 29, 2020, 4:27:57 PM
+    Author     : Nicolaas'
+*/
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+body{
+    background-image:url("https://w.wallhaven.cc/full/lm/wallhaven-lm5w9r.jpg");
+}
+
+.form-group{
+    font-weight: bold;
+}
+
+.navbar-brand{
+    font-family: 'Satisfy', cursive;
+    font-size: 40px;
+}
+
+.nav-link{
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
