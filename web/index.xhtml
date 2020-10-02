@@ -80,20 +80,20 @@
             <h3 class="mt-5">Registration Form</h3>
             <div class="form-group">
                 <label for="First Name">First Name</label>
-                    <h:inputText id="fn" class="form-control" value="" required="true"
+                    <h:inputText id="fn" class="form-control" value="#{registrationForm.firstName}" required="true"
                     requiredMessage="You must enter the first name"/>
                     <h:message for="fn" style="color:red"/>
                     </div>
             <div class="form-group">
                 <label for="Last Name">Last Name</label>
-                    <h:inputText id="ln" class="form-control" value="" required="true"
+                    <h:inputText id="ln" class="form-control" value="#{registrationForm.lastName}" required="true"
                     requiredMessage="You must enter the last name"/>
                     <h:message for="ln" style="color:red"/>
                     </div>
             <div class="form-group">
                 <label for="Select Gender">Select Gender</label>
                     <h:selectOneRadio id="gender" title="gender" layout="lineDirection"
-                value="" required="true" requiredMessage="You must select the gender">
+               value="#{registrationForm.gender}" required="true" requiredMessage="You must select the gender">
                     <div class="radio">
                         <f:selectItem id="gender1"
                         itemLabel="&nbsp;Male&nbsp;&nbsp;" itemValue="male"/></div>
@@ -105,7 +105,7 @@
                     </div>
             <div class="form-group">
                 <label for="Date of Birth">Date of Birth</label>
-                    <h:inputText id="dob" styleClass="form-control datepicker" value=""
+                    <h:inputText id="dob" styleClass="form-control datepicker" value="#{registrationForm.dateofBirth}"
                     converterMessage="Enter DOB in MM/DD/YY format" required="true" requiredMessage="You must
                     enter the date of birth">
                     <f:convertDateTime pattern="MM/dd/yy" type="date"/>
@@ -115,12 +115,12 @@
             <div class="form-group">
                 <label for="Address">Address</label>
                     <h:inputTextarea id="address" cols="20" rows="3" class="form-control"
-                    value="" required="true" requiredMessage="You must enter the address"/>
+                    value="#{registrationForm.address}" required="true" requiredMessage="You must enter the address"/>
                     <h:message for="address" style="color:red"/>
                     </div>
             <div class="form-group">
                 <label for="contact">Contact Number</label>
-                    <h:inputText id="contact" class="form-control" value=""
+                    <h:inputText id="contact" class="form-control" value="#{registrationForm.contactNumber}"
                     required="true" requiredMessage="You must enter the contact number">
                     <f:validateRegex pattern="[0-9]{2}-+[0-9]{3}-+[0-9]{8}"/>
                     </h:inputText>
@@ -128,13 +128,13 @@
             </div>
             <div class="form-group">
                 <label for="E-mail Id">Email Id</label>
-                    <h:inputText id="email" class="form-control" value="" required="true"
+                    <h:inputText id="email" class="form-control" value="#{registrationForm.emailID}" required="true"
                     requiredMessage="You must enter the email id"/>
                     <h:message for="email" style="color:red"/>
             </div>
             <div class="form-group">
                 <label for="User Id">User Id</label>
-                    <h:inputText id="uid" class="form-control" value="" required="true"
+                    <h:inputText id="uid" class="form-control" value="#{registrationForm.userID}" required="true"
                     requiredMessage="You must enter user ID"
                     validatorMessage="User ID should at least 6 characters
                     long">
@@ -144,22 +144,24 @@
             </div>
             <div class="form-group">
                 <label for="Password">Password</label>
-                    <h:inputSecret id="pwd" class="form-control" value="" required="true"
-                    requiredMessage="You must enter the password">
+                    <h:inputSecret id="pwd" class="form-control" value="#{registrationForm.password}" required="true"
+                    requiredMessage="You must enter the password"
+                        validatorMessage="Password must be minimum 5
+characters long" validator="#{registrationForm.validateFinalPassword}">
                     <f:validateLength minimum="5"/>
                     </h:inputSecret>
                     <h:message for="pwd" style="color:red"/>
             </div>
             <div class="form-group">
                 <label for="confirm">Confirm Password</label>
-                    <h:inputSecret id="confirm" class="form-control" value=""
+                    <h:inputSecret id="confirm" class="form-control" value="#{registrationForm.confirmPassword}"
                     required="true" requiredMessage="You must confirm the
-                    password"/>
+                    password" validator="#{registrationForm.validateCPassword}"/>
                     <h:message for="confirm" style="color:red"/>
             </div>
             <div class="form-group">
             <h:commandButton id="reg_submit" class="btn btn-info" value="Submit"
-            action="Success"/>&nbsp;
+            action="success"/>&nbsp;
             <h:commandButton id="reg_reset" class="btn btn-info" value="Reset"
             immediate="true" action="registration"/>
             </div>

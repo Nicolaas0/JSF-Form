@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Aesthetic</title>
+    <link href="layout/index/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="layout/index/datepicker.css" rel="stylesheet" />
+    <link href="layout/index/style.css" rel="stylesheet" />
+    </h:head>
+    <h:body>
+        <h:form id="link">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent static-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Aesthetics</a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+
+                                <h:commandLink class="nav-link" value="Home" action="index?faces-
+                                redirect=true"/>
+
+                            </li>
+                            <li class="nav-item">
+
+                                <h:commandLink class="nav-link" value="About Us" action="about?faces-
+                                redirect=true"/>
+
+                            </li>
+                            <li class="nav-item">
+                                <h:commandLink class="nav-link" value="Registration"
+                                action="registration?faces-redirect=true"/>
+                            </li>
+                            <li class="nav-item">
+                                <h:commandLink class="nav-link" value="Admissions"
+                                action="admissions?faces-redirect=true"/>
+                            </li>
+                            <li class="nav-item">
+                                <h:commandLink class="nav-link" value="Contact"
+                                action="contact?faces-redirect=true"/>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </h:form>
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <h:form id="login">
+                <h3 class="mt-5">Account Login</h3>
+                    <div class="form-group">
+                        <label for="userid">ID</label>
+                        <h:inputText id="userid" class="form-control" required="true"/>
+                        <h:message for="userid"/> <br/>
+                    </div>
+                    <div class="form-group"> 
+                        <label for="pass">Password</label>
+                        <h:inputSecret id="password" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <h:commandButton id="submit" class="btn btn-info" value="Submit" action="#"/>&nbsp;
+                        
+                        <h:commandButton id="reset" class="btn btn-info" value="Reset" action="#"/>
+                        
+                    </div>
+            </h:form>
+        </div>
+    <div class="col-sm-8">
+        <h:form id="register">
+            <h3 class="mt-5">Welcome
+            <h:outputText id="o1" value="#{registrationForm.firstName}"/>
+            <h:outputText id="o2" value="#{registrationForm.lastName}"/>
+            </h3>
+            <p class="lead">
+            You have successfully registered with our website.<br/>
+            Your User ID is:<h:outputText id="o3"
+            value="#{registrationForm.userID}"/>
+            </p>
+        </h:form>
+        </div>
+    </div>
+</div>
+
+<script src="layout/index/jquery/jquery.js"></script>
+<script src="layout/index/bootstrap/js/bootstrap.min.js"></script>
+<script src="layout/index/jquery/bootstrap-datepicker.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+$('.datepicker').datepicker({
+});
+});
+</script>
+    </h:body>
+</html>

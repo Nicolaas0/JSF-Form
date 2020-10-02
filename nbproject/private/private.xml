@@ -4,11 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Nicolaas'/Documents/NetBeansProjects/JSF%20Form/web/layout/index/bootstrap/css/bootstrap.min.css</file>
-            <file>file:/C:/Users/Nicolaas'/Documents/NetBeansProjects/JSF%20Form/web/layout/index/bootstrap/css/bootstrap.css</file>
-            <file>file:/C:/Users/Nicolaas'/Documents/NetBeansProjects/JSF%20Form/web/layout/index/datepicker.css</file>
-            <file>file:/C:/Users/Nicolaas'/Documents/NetBeansProjects/JSF%20Form/web/layout/index/jquery/bootstrap-datepicker.js</file>
+            <file>file:/C:/Users/Nicolaas'/Documents/NetBeansProjects/JSF%20Form/src/java/mbean/RegistrationForm.java</file>
+            <file>file:/C:/Users/Nicolaas'/Documents/NetBeansProjects/JSF%20Form/web/success.xhtml</file>
             <file>file:/C:/Users/Nicolaas'/Documents/NetBeansProjects/JSF%20Form/web/index.xhtml</file>
-            <file>file:/C:/Users/Nicolaas'/Documents/NetBeansProjects/JSF%20Form/web/layout/index/style.css</file>
+            <file>file:/C:/Users/Nicolaas'/Documents/NetBeansProjects/JSF%20Form/web/WEB-INF/web.xml</file>
         </group>
     </open-files>
 </project-private>
