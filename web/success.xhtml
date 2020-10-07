@@ -60,15 +60,18 @@
                 <h3 class="mt-5">Account Login</h3>
                     <div class="form-group">
                         <label for="userid">ID</label>
-                        <h:inputText id="userid" class="form-control" required="true"/>
+                        <h:inputText id="userid" class="form-control" required="true"
+                                     value="#{bean.ID}"/>
                         <h:message for="userid"/> <br/>
                     </div>
                     <div class="form-group"> 
                         <label for="pass">Password</label>
-                        <h:inputSecret id="password" class="form-control"/>
+                        <h:inputSecret id="password" class="form-control"
+                                    required="true"   value="#{bean.PASS}"/>
                     </div>
                     <div class="form-group">
-                        <h:commandButton id="submit" class="btn btn-info" value="Submit" action="#"/>&nbsp;
+                        <h:commandButton id="submit" class="btn btn-info" value="Submit"
+                        action="#{bean.Action}"/> &nbsp;
                         
                         <h:commandButton id="reset" class="btn btn-info" value="Reset" action="#"/>
                         

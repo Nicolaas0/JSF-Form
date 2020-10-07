@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+<title>Grant University</title>
+<link href="layout/index/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="layout/index/style.css" rel="stylesheet"/>
+</h:head>
+<h:body>
+<h:form id="link">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent static-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Grant University</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+
+                    <h:commandLink class="nav-link" value="Home" action="index?faces-
+                    redirect=true"/>
+
+                    </li>
+                    <li class="nav-item">
+
+                    <h:commandLink class="nav-link" value="About Us" action="about?faces-
+                    redirect=true"/>
+
+                    </li>
+                    <li class="nav-item">
+                    <h:commandLink class="nav-link" value="Registration"
+                    action="registration?faces-redirect=true"/>
+                    </li>
+                    <li class="nav-item">
+                    <h:commandLink class="nav-link" value="Admissions"
+                    action="admissions?faces-redirect=true"/>
+                    </li>
+                    <li class="nav-item">
+                    <h:commandLink class="nav-link" value="Contact"
+                    action="contact?faces-redirect=true"/>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</h:form>
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="mt-5">Student Profile Form</h3>
+                <p class="lead">This is your profile</p>
+                    <table class="table table-striped">
+                        <tr>
+                            <td>
+                            First Name
+                            </td>
+                            <td>
+                            :
+                            </td>
+
+                            <td><h:outputText value="John"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            Last Name
+                            </td>
+                            <td>
+                            :
+                            </td>
+
+                            <td><h:outputText value="Williams"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            Gender
+                            </td>
+                            <td>
+                            :
+                            </td>
+
+                            <td><h:outputText value="Male"/>
+                            </td>
+                            </tr>
+                        <tr>
+                            <td>
+                            Date of birth
+                            </td>
+                            <td>
+                            :
+                            </td>
+
+                            <td><h:outputText value="09/05/92"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            Address
+                            </td>
+                            <td>
+                            :
+                            </td>
+
+                            <td><h:outputText value="121, Verbo Street, California"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            Phone number
+                            </td>
+                            <td>
+                            :
+                            </td>
+                            <td><h:outputText value="11-222-77348762"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            E-mail Id
+                            </td>
+                            <td>
+                            :
+                            </td>
+
+                            <td><h:outputText value="john@live.com"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+<br/>
+<h:form>
+
+<h:commandButton value="Log Out" action="index?faces-
+redirect=true" class="btn btn-info"/>
+
+</h:form>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<script src="vendor/jquery/jquery.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+</h:body>
+</html>

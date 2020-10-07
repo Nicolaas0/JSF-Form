@@ -27,3 +27,8 @@ body{
     font-size: 20px;
     color: black;
 }
+
+.col-sm-8 .register .mt-5 .lead{
+    color: #ffffff;
+    font-weight: 10px;
+}
