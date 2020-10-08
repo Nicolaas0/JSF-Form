@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Grant University</title>
+    <link href="layout/index/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="layout/index/style.css" rel="stylesheet"/>
+</h:head>
+<h:body>
+    <h:form id="link">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent static-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Grant University</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" 
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+
+                    <h:commandLink class="nav-link" value="Home" action="index?faces-
+                    redirect=true"/>
+
+                    </li>
+                    <li class="nav-item">
+
+                    <h:commandLink class="nav-link" value="About Us" action="about?faces-
+                    redirect=true"/>
+
+                    </li>
+                    <li class="nav-item">
+                    <h:commandLink class="nav-link" value="Registration"
+                    action="registration?faces-redirect=true"/>
+                    </li>
+                    <li class="nav-item">
+                    <h:commandLink class="nav-link" value="Admissions"
+                    action="admissions?faces-redirect=true"/>
+                    </li>
+                    <li class="nav-item">
+                    <h:commandLink class="nav-link" value="Contact"
+                    action="contact?faces-redirect=true"/>
+                    </li>
+                    <li class="nav-item active">
+                    <h:commandLink class="nav-link" value="Course Details"
+                    action="CourseDetails?faces-redirect=true"/>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</h:form>
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <h:form id="login">
+                <h3 class="mt-5">Account Login</h3>
+                    <div class="form-group">
+                        <label for="userid">ID</label>
+                        <h:inputText id="userid" class="form-control" value="#{bean.ID}"
+                        required="true" requiredMessage="You must enter your username"/>
+                        <h:message for="userid" style="color:red"/>
+</div>
+                    <div class="form-group">
+                        <label for="pass">Password</label>
+                        <h:inputSecret id="password" class="form-control"
+                        value="#{bean.PASS}" required="true" requiredMessage="You must enter your password"/>
+                        <h:message for="password" style="color:red"/>
+                        </div>
+                    <div class="form-group">
+                        <h:commandButton id="submit" class="btn btn-info" value="Submit"
+                        action="#{bean.Action}"/>&nbsp;
+                        <h:commandButton id="reset" class="btn btn-info" value="Reset"
+                        action="#"/>
+                        </div>
+</h:form>
+</div>
+<div class="col-sm-8">
+    <h3 class="mt-5">Course Details</h3>
+        <h:form id="course">
+            <div class="form-group">
+                <label for="cname">Select Course Name</label>
+                <h:selectOneMenu class="form-control" id="cname"
+                value="#{courseDetailsBean.courseName}"
+                valueChangeListener="#{courseDetailsBean.CourseDetailsAction}"
+                onchange="this.form.submit()">
+                <f:selectItem itemValue="0" itemLabel="Choose" />
+                <f:selectItem itemValue="Science" itemLabel="Science" />
+                <f:selectItem itemValue="Law" itemLabel="Law" />
+                <f:selectItem itemValue="Medical" itemLabel="Medical" />
+                <f:selectItem itemValue="Management" itemLabel="Management" />
+                </h:selectOneMenu>
+            </div>
+            <table class="table table-striped">
+                <tr>
+                <td>
+                Course Id
+                </td>
+                <td align="center">
+                <h:outputText id="cid"
+                binding="#{courseDetailsBean.courseId}"/>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                Course Duration
+                </td>
+                    <td align="center">
+                <h:outputText id="cdur"
+                binding="#{courseDetailsBean.courseDuration}"/>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                Course Eligibility
+                </td>
+                <td align="center">
+                <h:outputText id="celig"
+                binding="#{courseDetailsBean.courseEligibility}"/>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                Course Fee
+                </td>
+                <td align="center">
+                <h:outputText id="cfee"
+                binding="#{courseDetailsBean.courseFee}"/>
+                </td>
+                </tr>
+            </table>
+</h:form>
+</div>
+</div>
+</div>
+<script src="vendor/jquery/jquery.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+</h:body>
+</html>
