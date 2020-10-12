@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:composite="http://xmlns.jcp.org/jsf/composite">
+
+    <composite:interface>
+        <composite:attribute name="userName" default=""/>
+        <composite:attribute name="password" default="pwd"/>
+        <composite:attribute name="submitValue" default="Submit"/>
+        <composite:attribute name="resetValue" default="Reset"/>
+        <composite:valueHolder name="id"/>
+        <composite:valueHolder name="pass"/>
+    </composite:interface>
+    <composite:implementation>
+        <h:form id="login">
+            <h3 class="mt-5">Account Login</h3>
+            <div class="form-group">
+                <label for="userid">ID</label>
+                <h:inputText id="id" class="form-control"
+                             value="#{cc.attrs.userName}" required="true" requiredMessage="You must enter your
+                             username"/>
+                <h:message for="id" style="color:red"/>
+            </div>
+            <div class="form-group">
+                <label for="pass">Password</label>
+                <h:inputSecret id="pass" class="form-control"
+                               value="#{cc.attrs.password}" required="true" requiredMessage="You must enter your
+                               password"/>
+                <h:message for="pass" style="color:red"/>
+            </div>
+            <div class="form-group">
+                <h:commandButton id="submit" class="btn btn-info"
+                                 value="#{cc.attrs.submitValue}" action="#{bean.Action}"/>&nbsp;
+                <h:commandButton id="reset" class="btn btn-info"
+                                 value="#{cc.attrs.resetValue}" type="reset"/>
+            </div>
+        </h:form>
+    </composite:implementation>
+</html>

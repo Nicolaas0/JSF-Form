@@ -3,10 +3,11 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
 xmlns:h="http://xmlns.jcp.org/jsf/html"
-xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+xmlns:lc="http://xmlns.jcp.org/jsf/composite/ezcomp">
 <h:head>
 <title>Grant University</title>
-<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="layout/index/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 </h:head>
 <h:body>
 <h:form id="link">
@@ -14,9 +15,9 @@ xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 <div class="container">
 <a class="navbar-brand" href="#">Grant University</a>
 
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-
-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-
-label="Toggle navigation">
+<button class="navbar-toggler" type="button" data-toggle="collapse"
+data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" 
+aria-label="Toggle navigation">
 
 <span class="navbar-toggler-icon"></span>
 </button>
@@ -59,31 +60,10 @@ action="CourseDetails?faces-redirect=true"/>
 <div class="container">
 <div class="row">
 <div class="col-sm-3">
-<h:form id="login">
-<h3 class="mt-5">Account Login</h3>
-<div class="form-group">
-<label for="userid">ID</label>
-
-<h:inputText id="userid" class="form-control" value="#{bean.ID}"
-
-required="true" requiredMessage="You must enter your username"/>
-<h:message for="userid" style="color:red"/>
-</div>
-<div class="form-group">
-<label for="pass">Password</label>
-
-<h:inputSecret id="password" class="form-control"
-
-value="#{bean.PASS}" required="true" requiredMessage="You must enter your password"/>
-<h:message for="password" style="color:red"/>
-</div>
-<div class="form-group">
-<h:commandButton id="submit" class="btn btn-info" value="Submit"
-action="#{bean.Action}"/>&nbsp;
-<h:commandButton id="reset" class="btn btn-info" value="Reset"
-type="reset"/>
-</div>
-</h:form>
+<lc:LoginControl userName="#{bean.ID}" password="#{bean.PASS}"
+submitValue="Submit" resetValue="Reset"/>
+<lc:LoginControl userName="#{bean.ID}" password="#{bean.PASS}"
+submitValue="Submit" resetValue="Reset"/>
 </div>
 <div class="col-sm-8">
 <ui:insert name="body"/>
